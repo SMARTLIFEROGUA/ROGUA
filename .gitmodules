@@ -1,0 +1,6 @@
+[submodule "l10n_gt_edi"]
+	path = l10n_gt_edi
+	url = https://gitlab.com/HomebrewSoft/l10n_gt/l10n_gt_edi
+[submodule "l10n_gt_infile"]
+	path = l10n_gt_infile
+	url = https://gitlab.com/HomebrewSoft/l10n_gt/l10n_gt_infile
