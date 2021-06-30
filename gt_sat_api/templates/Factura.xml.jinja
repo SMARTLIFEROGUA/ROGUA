@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dte:GTDocumento
+  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+  xmlns:dte="http://www.sat.gob.gt/dte/fel/0.2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  Version="0.1"
+  xsi:schemaLocation="http://www.sat.gob.gt/dte/fel/0.2.0">
+  <dte:SAT ClaseDocumento="dte">
+    <dte:DTE ID="DatosCertificados">
+      <dte:DatosEmision ID="DatosEmision">
+        <dte:DatosGenerales
+          CodigoMoneda="{{ dte.codigo_moneda }}"
+          FechaHoraEmision="{{ dte.fecha_hora_emision.isoformat() }}"
+          Tipo="{{ dte.tipo }}"/>
+        <dte:Emisor
+          AfiliacionIVA="{{ dte.emisor.afiliacion_iva }}"
+          CodigoEstablecimiento="{{ dte.emisor.codigo_establecimiento }}"
+          CorreoEmisor="{{ dte.emisor.correo_emisor }}"
+          NITEmisor="{{ dte.emisor.nit_emisor }}"
+          NombreComercial="{{ dte.emisor.nombre_comercial }}"
+          NombreEmisor="{{ dte.emisor.nombre_emisor }}">
+          <dte:DireccionEmisor>
+            <dte:Direccion>{{ dte.emisor.direccion.direccion }}</dte:Direccion>
+            <dte:CodigoPostal>{{ dte.emisor.direccion.codigo_postal }}</dte:CodigoPostal>
+            <dte:Municipio>{{ dte.emisor.direccion.municipio }}</dte:Municipio>
+            <dte:Departamento>{{ dte.emisor.direccion.departamento }}</dte:Departamento>
+            <dte:Pais>{{ dte.emisor.direccion.pais }}</dte:Pais>
+          </dte:DireccionEmisor>
+        </dte:Emisor>
+        <dte:Receptor
+          CorreoReceptor="{{ dte.receptor.correo_receptor }}"
+          IDReceptor="{{ dte.receptor.id_receptor }}"
+          NombreReceptor="{{ dte.receptor.nombre_receptor }}">
+          <dte:DireccionReceptor>
+            <dte:Direccion>{{ dte.receptor.direccion.direccion }}</dte:Direccion>
+            <dte:CodigoPostal>{{ dte.receptor.direccion.codigo_postal }}</dte:CodigoPostal>
+            <dte:Municipio>{{ dte.receptor.direccion.municipio }}</dte:Municipio>
+            <dte:Departamento>{{ dte.receptor.direccion.departamento }}</dte:Departamento>
+            <dte:Pais>{{ dte.receptor.direccion.pais }}</dte:Pais>
+          </dte:DireccionReceptor>
+        </dte:Receptor>
+        <dte:Frases>
+        {% for frase in dte.frases %}
+          <dte:Frase CodigoEscenario="{{ frase.codigo_escenario }}" TipoFrase="{{ frase.tipo_frase }}"/>
+        {% endfor %}
+        </dte:Frases>
+        <dte:Items>
+          {% for item in dte.items %}
+          <dte:Item BienOServicio="{{ item.bien_o_servicio }}" NumeroLinea="{{ loop.index }}">
+            <dte:Cantidad>{{ "%.2f"|format(item.cantidad) }}</dte:Cantidad>
+            <dte:UnidadMedida>{{ item.unidad_medida }}</dte:UnidadMedida>
+            <dte:Descripcion>{{ item.descripcion }}</dte:Descripcion>
+            <dte:PrecioUnitario>{{ "%.2f"|format(item.precio_unitario) }}</dte:PrecioUnitario>
+            <dte:Precio>{{ "%.2f"|format(item.precio) }}</dte:Precio>
+            <dte:Descuento>{{ "%.2f"|format(item.descuento) }}</dte:Descuento>
+            <dte:Impuestos>
+              {% for impuesto in item.impuestos %}
+              <dte:Impuesto>
+                <dte:NombreCorto>{{ impuesto.nombre_corto }}</dte:NombreCorto>
+                <dte:CodigoUnidadGravable>{{ impuesto.codigo_unidad_gravable }}</dte:CodigoUnidadGravable>
+                <dte:MontoGravable>{{ "%.2f"|format(impuesto.monto_gravable) }}</dte:MontoGravable>
+                <dte:MontoImpuesto>{{ "%.2f"|format(impuesto.monto_impuesto) }}</dte:MontoImpuesto>
+              </dte:Impuesto>
+              {% endfor %}
+            </dte:Impuestos>
+            <dte:Total>{{ "%.2f"|format(dte.items | sum(attribute='precio')) }}</dte:Total>
+          </dte:Item>
+          {% endfor %}
+        </dte:Items>
+        <dte:Totales>
+          <dte:TotalImpuestos>
+            {% for impuesto in dte.totales_impuestos %}
+            <dte:TotalImpuesto NombreCorto="{{ impuesto.nombre_corto }}" TotalMontoImpuesto="{{ impuesto.total_monto_impuesto }}"/>
+            {% endfor %}
+          </dte:TotalImpuestos>
+          <dte:GranTotal>{{ "%.2f"|format(total) }}</dte:GranTotal>
+        </dte:Totales>
+      </dte:DatosEmision>
+    </dte:DTE>
+  </dte:SAT>
+</dte:GTDocumento>
