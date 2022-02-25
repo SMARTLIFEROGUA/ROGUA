@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mass Register Payments for Multiple Vendors & Customers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<section class="oe_container oe_dark">
+	<div style="border-top:#252E64 solid 10px;"></div>
+	<div class="oe_row oe_spaced">
+		<h1 style="padding-top: 0%;text-transform: uppercase;font-weight: 900;color: #3d3d3d !important;margin-bottom:18px;">
+	       <center>Mass Register Payments for Multiple Vendors & Customers</center>
+	    </h1>
+	    <center><div style="width: 30%; border-top:#252E64 solid 10px;"></div></center>
+	    <div class="oe_slogan" style="margin:5px 0 !important;">
+            <a href="https://www.omaxinformatics.com" target="new">
+                <img src="omax.png" style="width: 190px; margin-bottom: 0px;" class="center-block">
+            </a>
+        </div>
+	    
+	</div>
+	<div style="border-top:#252E64 solid 10px;"></div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="font-size:30px;"><b><u>Overview</u></b></h2>
+        <p style="font-size: 16px;text-align:center;">
+           	This product helps Users to allow Mass-Registering Payments involving multiple Vendors Or Customers. Keep activity log in payments's chatter. User can select multiple Vendors Or Customers. Payment wizard gives you full details of selected Invioces/Bills.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container ">
+    <div class="oe_row oe_spaced">
+	    <h2 class="oe_slogan" style="font-size:30px;"><b><u>Feature</u></b></h2>
+	    <div style="font-size: 16px;">
+		    <ul class="list-unstyled mr32 ml32">
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Customer Invoices.</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Credit Notes (Customer Credit Note).</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Sales Receipt.</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Vendor Bills.</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Refunds (Vendor Credit Note).</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Allow Mass-Registering Payments for Purchase Receipt</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> Activity log in payments's chatter. So User can know about done payment's reference.</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> User can do Full Payment or Partially Payment.</li>
+                <li><i class="fa fa-check" style="color: #252E64;"></i> No more configuration is required, just install it and use it.</li>
+            </ul>
+	    </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <h2 class="oe_slogan" style="font-size:30px;"><b><u>How It Works</u></b></h2>
+    <h3 class="oe_slogan"><b>Register ValidatePayment for Multiple Vendors or Customers</b></h3>
+    <div style="margin-left: 6%;">
+        Select Vendor Bills with multiple Vendors WHERE Vendor Bills's Status must be POSTED and Payment Status must not be PAID.<br/>
+            Click on <b> Register Payment for Multiple Vendors/Customers.</b><br/>
+            It will open a Pop-Up with selected vendor bill's Information.
+    </div>
+    <div class="oe_bg_img">
+        <img class="img-thumbnail img-responsive oe_picture oe_screenshot" src="1.png">
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div>
+        <br/>
+        <h3 class="oe_slogan"><b>Pop-up Screen - Explanations</b></h3>
+        <div style="margin-left: 6%;">
+            <h2><b>Explanations:</b></h2>
+            <b>Payment Journal :</b> User select a Journal.<br/>
+            <b>Payment Date :</b> Today's date by default. User can change it.<br/>
+            <b>Selected Partners :</b> User can see list of Unique Vendors/Customers which selected for
+            Mass-Registering Payments. Its <b>Readonly</b> field.<br/>
+            <br/>
+            Wizard Lines will show Invoices <b>Sort By Vendor/Customer</b> of Vendor-Bill/Customer-Invoice From
+            selected Invoices.<br/>
+        </div>
+    </div>
+    <div class="oe_bg_img">
+        <center>
+            <img class="img-thumbnail img-responsive oe_picture oe_screenshot" src="2.png">
+        </center>
+    </div>
+        
+
+    <div class="oe_span12" style="margin-top: -2%;">
+        <h2><b>Details of Invoices:</b></h2>
+        <b>Partner :</b> Vendor-Name/Customer-Name.<br/>
+        <b>Number :</b> Number of invoice.<br/>
+        <b>Due Date :</b> Due Date of related Vendor-Bill/Customer-Invoice.<br/>
+        <b>Invoice Amount :</b> Total amount of related Vendor-Bill/Customer-Invoice.<br/>
+        <b>Amount Due :</b> Due Amount of related Vendor-Bill/Customer-Invoice.<br/>
+        <b>Payment Method Type :</b> By Default It will set <b>Manual. Its editable</b> So User can change it.
+        e.g Check.<br/>
+        <b>Payment Amount :</b> It will set remaining payment amount of related Vendor-Bill/Customer-Invoice.
+        <b>Its editable</b> So User can change it.<br/>
+        <b>Memo :</b> Reference Or Name of related Vendor-Bill/Customer-Invoice. <b>Its editable</b> So User can
+        change it.<br/>
+        <b>Validate Button:</b>
+        If Register payments for Vendor bills, Validate Button will create Vendor payments Group By
+        <b>Vendors</b> and
+        <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+        <b>Payment Method Type.</b>
+        <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+        If Register payments for Customer invoices, Validate Button will create Customer payments Group By
+        <b>Customers</b> and
+        <br/> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+        <b>Payment Method Type.</b>
+        <br/><br/>
+
+        <pre>
+<b>Example:</b>
+    Here we selected vendor invoices of Azure Interior,Deco Addict,Lumber Inc.,Wood Corner.
+    After perform action <b>Register Payment for Multiple Vendors/Customers</b>, It will show Vendor-Bill Sort By Vendor. So use can easy see the invoice details.
+
+    Here we can see <b>2</b> Vendor-Bill of Wood Corner, <b>2</b> Vendor-Bill of Deco Addict, <b>4</b> Vendor-Bill of Azure Interior
+    and <b>2</b> Vendor-Bill of Lumber Inc.
+
+    In <b>BILL/2020/0002</b>(Azure Interior vendor), We selected Payment-Method-Type as <b>Check.</b>
+
+    So Now when we Click <b>Validate</b> Button, <b>5</b> payments will create.
+    <b>Lumber Inc   : 1</b> payment will create with 28.75 PaymentAmount. <b>SUM</b>(BILL/2020/0007, BILL/2020/0006)
+    <b>Deco Addict  : 1</b> payment will create with 2,760.00 PaymentAmount. <b>SUM</b>(BILL/2020/0004, BILL/2020/0005)
+    <b>Wood Corner  : 1</b> payment will create with 3,608.13 PaymentAmount. <b>SUM</b>(BILL/2020/0009, BILL/2020/0008)
+
+    For <b>Azure Interior</b> vendor, we can see two different Payment-Method-Types So <b>separate payments</b> will create.
+    <b>1</b> payment will create with 20.00 PaymentAmount WHERE Payment-Method-Type = <b>Check. SUM</b>(BILL/2020/0002)
+    <b>1</b> payment will create with 671.10 PaymentAmount WHERE Payment-Method-Type = <b>Manual. SUM</b>(BILL/2018/0001, BILL/2020/0003, BILL/2020/0001)
+    </pre>
+
+    </div>
+    <div class="oe_row"></div>
+</section>
+
+<section class="oe_container">
+        <br/>
+        <h3 class="oe_slogan"><b>Generated Payments Records</b></h3>
+        <div style="margin-left: 6%;">
+                User can find created payments records.<br/>
+                Payments records will be in <b>Posted Status.</b>
+        </div>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="3.png">
+        </div>
+</section>
+
+<section class="oe_container oe_dark">
+        <br/>
+        <h3 class="oe_slogan"><b>Activity Log in each Payment record</b></h3>
+        <div style="margin-left: 6%;">
+            User can notify that payment made by <b>Register Payment for Multiple
+            Vendors/Customers</b> action.
+        </div>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="4.png">
+        </div>
+</section>
+
+<section class="oe_container">
+        <br/>
+        <h3 class="oe_slogan"><b>Status of Bills</b></h3>
+        <div style="margin-left: 6%;">
+            After perform action Register Payment for Multiple Vendors/Customers <br/>
+            Related bills records Payment Status will be in <b>Paid.</b>
+        </div>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="2_1.png">
+        </div>
+        
+</section>
+
+<section class="oe_container">
+        <br/>
+        <h3 class="oe_slogan"><b>Journal Entries</b></h3>
+        <div style="margin-left: 6%;">
+            Journal Entries will create as per Odoo default accounting Functionality.
+        </div>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="5.png">
+        </div>
+</section>
+
+<section class="oe_container">
+        <br/>
+        <h1 class="oe_slogan" style="color: #021882;white-space: nowrap;font-size: 36px;margin-top: 24px;margin-bottom: 0;">Refunds (Vendor Credit Note)</h1>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="6.png">
+        </div>
+</section>
+
+<section class="oe_container">
+        <br/>
+        <h1 class="oe_slogan" style="color: #021882;white-space: nowrap;font-size: 36px;margin-top: 24px;margin-bottom: 0;">
+            Purchase Receipt
+        </h1>
+        <div class="oe_bg_img">
+            <img class="oe_picture oe_screenshot" src="7.png">
+        </div>
+</section>
+
+<p class='oe_mt32'>
+    <center><h1><b>*Same Functionality available for Customer Invoices also.</h1></center>
+</p>
+<section class="oe_container">
+    <br/>
+    <h1 class="oe_slogan" style="color: #021882;white-space: nowrap;font-size: 36px;margin-top: 24px;margin-bottom: 0;">
+        Customer Invoices
+    </h1>
+    <div class="oe_bg_img">
+        <img class="oe_picture oe_screenshot" src="8.png">
+    </div>
+</section>
+
+<section class="oe_container">
+    <br/>
+    <h1 class="oe_slogan" style="color: #021882;white-space: nowrap;font-size: 36px;margin-top: 24px;margin-bottom: 0;">
+        Credit Notes (Customer Credit Note)
+    </h1>
+    <div class="oe_bg_img">
+        <img class="oe_picture oe_screenshot" src="9.png">
+    </div>
+</section>
+
+<section class="oe_container">
+    <br/>
+    <h1 class="oe_slogan" style="color: #021882;white-space: nowrap;font-size: 36px;margin-top: 24px;margin-bottom: 0;">
+        Sales Receipt
+    </h1>
+    <div class="oe_bg_img">
+        <img class="oe_picture oe_screenshot" src="10.png">
+    </div>
+</section>
+
+<section class="oe_container ">
+    <div class="oe_row oe_spaced">
+	    <h2 class="oe_slogan" style="font-size:30px;"><b><u>Free Support</u></b></h2>
+	    <div style="font-size: 16px;">
+		    <ul class="list-unstyled mr32 ml32">
+                <center>You will get <b>100 Days</b> free support incase any bugs or issue (Except data recovery).</center><br/>
+                <center>This module is successfully works in Community Editions only.</center>
+            </ul>
+	    </div>
+    </div>
+</section>
+<section class="oe_container ">
+    <div class="oe_row oe_spaced">
+	    <h2 class="oe_slogan" style="font-size:30px;"><b><u>Get In Touch</u></b></h2>
+	    <div style="border-top:#252E64 solid 10px;"></div>
+	    <div class="oe_slogan" style="margin-top:10px !important;">
+            <a href="https://www.omaxinformatics.com" target="new">
+                <img src="omax.png" style="width: 190px; margin-bottom: 20px;" class="center-block">
+            </a>
+        </div>
+        <div class="oe_slogan" style="margin-top:10px !important;">
+            <a class="btn btn-primary btn-lg mt8" style="color: #FFFFFF !important; background-color: #252E64;"
+               target="new" href="https://www.youtube.com/watch?v=iw90ZuPyisc">
+                <i class="fa fa-check-square"></i> Video Tutorial
+            </a>
+            <a class="btn btn-primary btn-lg mt8" style="color: #FFFFFF !important; background-color: #252E64;"
+               target="new"
+               href="https://apps.odoo.com/apps/modules/browse?search=OMAX+Informatics">
+                <i class="fa fa-binoculars"></i> More Apps
+            </a>
+        </div>
+        <div class="table-responsive">
+            <table class="table" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td colspan="2" style="font-size:16px; font-weight:bold;" width="100%" align="center">
+                            <span class="fa fa-certificate fa-1x"> Our Odoo Services</span>
+                        </td>
+                    </tr>
+		        </tbody>
+            </table>
+            <table class="table" cellpadding="0" cellspacing="0" border="0" width="100%">
+		        <tbody>
+			        <tr>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Implementation</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Development</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Customization</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Migration</span></center></td>
+			        </tr>
+			        <tr>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Integration</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Training</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Support</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> Hire Developer</span></center></td>
+			        </tr>
+		        </tbody>
+	        </table>
+            <br/>
+            <table class="table" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td colspan="2" style="font-size:16px; font-weight:bold;" width="100%" align="center">
+                            <span class="fa fa-certificate fa-1x"> For support, query and question contact us.</span>
+                        </td>
+                    </tr>
+		        </tbody>
+            </table>
+            <table class="table" cellpadding="0" cellspacing="0" border="0" width="100%">
+		        <tbody>
+			        <tr>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-envelope fa-1x"> contact@omaxinformatics.com</span></center></td>
+				        <td style="background-color: #252E64; color:white; border-radius: 15px; font-weight: bold;"><center><span class="fa fa-globe fa-1x"> www.omaxinformatics.com</span></center></td>
+			        </tr>
+		        </tbody>
+	        </table>
+        </div>
+        <br/>
+        <div style="border-top:#252E64 solid 10px;"></div>
+    </div>
+</section>
+<section class="oe_container ">
+    <div class="oe_row oe_spaced">
+	    <h2 class="oe_slogan" style="font-size:30px; color:#252E64"><b>Thank you for visiting</b></h2>
+    </div>
+</section>
+</body>
+</html>
