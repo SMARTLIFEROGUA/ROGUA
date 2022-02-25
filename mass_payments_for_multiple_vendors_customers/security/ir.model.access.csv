@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_multiple_register_payments,access_multiple_register_payments,model_multiple_register_payments,,1,1,1,1
+access_multiple_register_payments_line,access_multiple_register_payments_line,model_multiple_register_payments_line,,1,1,1,1
